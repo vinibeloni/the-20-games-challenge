@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://cp3e1k3o1umw2"]
+
+[ext_resource type="PackedScene" uid="uid://chss4p3dasas" path="res://ball.tscn" id="1_ub4jt"]
+[ext_resource type="Script" path="res://world.gd" id="1_whjw7"]
+[ext_resource type="PackedScene" uid="uid://bn6ab68k1bgxy" path="res://paddle.tscn" id="2_ehjyr"]
+
+[node name="World" type="Node"]
+script = ExtResource("1_whjw7")
+
+[node name="Ball" parent="." instance=ExtResource("1_ub4jt")]
+
+[node name="Left" parent="." instance=ExtResource("2_ehjyr")]
+
+[node name="Right" parent="." instance=ExtResource("2_ehjyr")]
+position = Vector2(316, 90)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 140.0
+offset_right = 180.0
+offset_bottom = 40.0
+
+[node name="Left" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "0"
+
+[node name="Right" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 30.0
+offset_right = 70.0
+offset_bottom = 23.0
+text = "0"
+
+[connection signal="area_entered" from="Ball" to="Ball" method="_on_area_entered"]

@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://chss4p3dasas"]
+
+[ext_resource type="Script" path="res://ball.gd" id="1_bqh4k"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1m16q"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ch5sj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4jyv3"]
+radius = 2.0
+
+[node name="Ball" type="Area2D"]
+position = Vector2(160, 90)
+script = ExtResource("1_bqh4k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_1m16q")
+scale = Vector2(4, 4)
+texture = SubResource("CanvasTexture_ch5sj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4jyv3")

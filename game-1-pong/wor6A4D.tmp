@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp3e1k3o1umw2"]
+
+[ext_resource type="PackedScene" uid="uid://chss4p3dasas" path="res://ball.tscn" id="1_ub4jt"]
+[ext_resource type="PackedScene" uid="uid://bn6ab68k1bgxy" path="res://paddle.tscn" id="2_ehjyr"]
+
+[node name="World" type="Node"]
+
+[node name="Ball" parent="." instance=ExtResource("1_ub4jt")]
+
+[node name="Left" parent="." instance=ExtResource("2_ehjyr")]
+
+[node name="Right" parent="." instance=ExtResource("2_ehjyr")]
+position = Vector2(316, 90)
+
+[connection signal="area_entered" from="Ball" to="Ball" method="_on_area_entered"]

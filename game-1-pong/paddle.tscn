@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bn6ab68k1bgxy"]
+
+[ext_resource type="Script" path="res://paddle.gd" id="1_wdwik"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xymoq"]
+radius = 2.0
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8kq0b"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_xdpnp"]
+
+[node name="Paddle" type="Area2D"]
+position = Vector2(4, 90)
+script = ExtResource("1_wdwik")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_xymoq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_8kq0b")
+position = Vector2(-5.96046e-08, 0)
+scale = Vector2(4, 28)
+texture = SubResource("CanvasTexture_xdpnp")
