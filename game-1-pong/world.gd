@@ -1,8 +1,8 @@
 extends Node
 
 @onready var _ball = $Ball
-@onready var _left_label = $Control/Left
-@onready var _right_label = $Control/Right
+@onready var _left_label = $Scores/Left
+@onready var _right_label = $Scores/Right
 
 @onready var _left_score = 0
 @onready var _right_score = 0

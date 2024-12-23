@@ -15,20 +15,20 @@ position = Vector2(4, 90)
 [node name="Right" parent="." instance=ExtResource("2_ehjyr")]
 position = Vector2(316, 90)
 
-[node name="Control" type="Control" parent="."]
+[node name="Scores" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 140.0
 offset_right = 180.0
 offset_bottom = 40.0
 
-[node name="Left" type="Label" parent="Control"]
+[node name="Left" type="Label" parent="Scores"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "0"
 
-[node name="Right" type="Label" parent="Control"]
+[node name="Right" type="Label" parent="Scores"]
 layout_mode = 0
 offset_left = 30.0
 offset_right = 70.0
