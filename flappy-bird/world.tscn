@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://de3xa7u416c4y"]
+
+[ext_resource type="PackedScene" uid="uid://dln1dsy8kju7t" path="res://bird.tscn" id="1_6y677"]
+[ext_resource type="Script" path="res://world.gd" id="1_570d8"]
+[ext_resource type="PackedScene" uid="uid://darvnjwig71lc" path="res://walls.tscn" id="2_1ou48"]
+[ext_resource type="PackedScene" uid="uid://uqoc4v1qvi4j" path="res://walls_spawner.tscn" id="4_5tj48"]
+
+[node name="World" type="Node"]
+script = ExtResource("1_570d8")
+
+[node name="Bird" parent="." instance=ExtResource("1_6y677")]
+position = Vector2(50, 90)
+
+[node name="Walls" parent="." instance=ExtResource("2_1ou48")]
+position = Vector2(320, 0)
+
+[node name="WallsSpawner" parent="." instance=ExtResource("4_5tj48")]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dln1dsy8kju7t"]
+
+[ext_resource type="Texture2D" uid="uid://bpah4fpqdddfw" path="res://icon.svg" id="1_v4xq3"]
+[ext_resource type="Script" path="res://bird.gd" id="1_vma7i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ute1w"]
+radius = 7.07107
+
+[node name="Bird" type="CharacterBody2D"]
+script = ExtResource("1_vma7i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.109375, 0.109375)
+texture = ExtResource("1_v4xq3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ute1w")
