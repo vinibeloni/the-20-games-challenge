@@ -2,19 +2,18 @@
 
 [ext_resource type="Script" path="res://paddle.gd" id="1_wdwik"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xymoq"]
-radius = 2.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t2gpb"]
+size = Vector2(4, 28)
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8kq0b"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_xdpnp"]
 
 [node name="Paddle" type="Area2D"]
-position = Vector2(4, 90)
 script = ExtResource("1_wdwik")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_xymoq")
+shape = SubResource("RectangleShape2D_t2gpb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("CanvasItemMaterial_8kq0b")
